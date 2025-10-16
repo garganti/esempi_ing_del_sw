@@ -19,10 +19,16 @@ import contatti.jooq.generated.tables.records.IndirizziRecord;
 // classe utile per avere tutti gli indirizzi salvati
 public class DataService {
 
+	// questo punta al file che contiene il database
+	// nota che usiamo il riferimento relativo in questo modo funziona in ogni computer
+	private static String DB_REL_FILE = "../contatti_db_sqlite/" + CreateDB.DB_REL_FILE;
+	
+	private static String DB_URL = "jdbc:sqlite:" + DB_REL_FILE;
+
 	public static List<IndirizziRecord> getIndirizziRecord() {
 		Connection conn;
 		try {
-			conn = DriverManager.getConnection(CreateDB.DB_URL);			
+			conn = DriverManager.getConnection(DB_URL);			
 			DSLContext create = DSL.using(conn, SQLDialect.SQLITE);
 			return create.selectFrom(Indirizzi.INDIRIZZI).fetchInto(IndirizziRecord.class);
 		} catch (SQLException e) {
