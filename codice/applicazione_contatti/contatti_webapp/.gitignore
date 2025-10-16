@@ -9,8 +9,6 @@
 
 # Eclipse
 .settings
-.classpath
-.project
 
 # The following files are generated/updated by vaadin-maven-plugin
 node_modules/
@@ -24,3 +22,4 @@ error-screenshots/
 frontend/generated/
 
 webpack.generated.js
+/bin/
