@@ -6,4 +6,4 @@ Prova di applicazione per il corso di ing. del software per gestione dei contatt
 
 vedi il wiki
 
-https://github.com/garganti/applicazione_contatti/wiki
+https://github.com/garganti/esempi_ing_del_sw/wiki
