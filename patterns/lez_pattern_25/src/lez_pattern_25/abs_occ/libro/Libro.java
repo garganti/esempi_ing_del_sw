@@ -1,4 +1,4 @@
-package lez_pattern_25.abs_occ_libro;
+package lez_pattern_25.abs_occ.libro;
 
 import java.util.ArrayList;
 import java.util.List;
