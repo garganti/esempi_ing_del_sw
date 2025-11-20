@@ -1,0 +1,6 @@
+Implementare una gerarchia di reparti di un’azienda utilizzando il General Hierarchy pattern.
+Ogni reparto può contenere sotto-reparti, e ogni sotto-reparto può a sua volta avere altri sotto-reparti.
+Esistono sotto-reparti che non possono avere al loro volta dei sotto-reparti.
+Esempio
+reparto ferramenta ha sottoreparti viti e bulloni
+Crea anche un main con  i tre parti della riga sopra 
