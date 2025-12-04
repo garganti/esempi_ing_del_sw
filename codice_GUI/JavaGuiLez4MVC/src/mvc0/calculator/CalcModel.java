@@ -8,6 +8,7 @@ public class CalcModel {
 		value = 1;
 	}
 	
+	// resetta il valore
 	public void clear(){
 		value = 1;
 		System.out.println(" reset value");

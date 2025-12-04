@@ -5,37 +5,37 @@ import java.awt.event.ActionListener;
 
 public class CalcController {
 
-	CalcModel model;
-	CalcView view;
+    CalcModel model;
+    CalcView view;
 
-	public CalcController(CalcModel m, CalcView v) {
-		// prede i refs
-		model = m;
-		view = v;
-		registerController();
-	}
+    public CalcController(CalcModel m, CalcView v) {
+	// prede i refs
+	model = m;
+	view = v;
+	registerController();
+    }
 
-	private void registerController() {
-		// si registra al bottone reset
-		view.btnReset.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				model.clear();
-				view.updateView();
-			}
-		});
-		view.btnMultiply.addActionListener(new ActionListener() {
+    private void registerController() {
+	// si registra al bottone reset
+	view.addActionListenerReset(new ActionListener() {
+	    @Override
+	    public void actionPerformed(ActionEvent arg0) {
+		model.clear();
+		view.updateView();
+	    }
+	});
+	view.addActionListenerMultiply(new ActionListener() {
 
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				try {
-					double d = Double.parseDouble(view.input.getText());
-					model.multiply(d);
-					view.updateView();
-				} catch (Exception ex) {
-				}
-			}
-		});
-	}
+	    @Override
+	    public void actionPerformed(ActionEvent e) {
+		try {
+		    double d = Double.parseDouble(view.input.getText());
+		    model.multiply(d);
+		    view.updateView();
+		} catch (Exception ex) {
+		}
+	    }
+	});
+    }
 
 }

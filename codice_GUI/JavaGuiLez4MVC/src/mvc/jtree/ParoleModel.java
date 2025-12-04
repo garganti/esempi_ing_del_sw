@@ -7,8 +7,6 @@ import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.MutableTreeNode;
 import javax.swing.tree.TreeNode;
 
-
-
 public class ParoleModel extends DefaultTreeModel{
 
 	public ParoleModel() {
